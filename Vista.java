@@ -27,7 +27,7 @@ public class Vista
 
     
     //Instancias de las clases.
-    //static VectorHeap<paciente> vectorheap = new VectorHeap<>(); 
+    static VectorHeap<paciente> vectorheap = new VectorHeap<>(); 
 
     /**
      * Método menu: Este método será el encargado de darle al usuario la opción de usar la implementación de VectorHeap o la opción de Java Collection Framework para poder usar el sistema hospitalario.
@@ -72,4 +72,68 @@ public class Vista
         //if(eleccion == 1){Heap();}
     }
 
+    /**
+     * Método void Heap: este método será el encargado de abrir el archivo pacientes.txt y enviarlo a la clase VectorHeap para poder procesar su información.
+     */
+    public static void Heap()
+    {
+        //Abriendo el archivo.
+        try {
+            //Buscando y abriendo.
+            File archivo = new File("pacientes.txt");
+            Scanner lector = new Scanner(archivo);
+
+            while(lector.hasNextLine())
+            {
+                //Leyendo cada línea del archivo.
+                String datos = lector.nextLine();
+
+                String espera[] = datos.split(", "); //Quitando comas del archivo.
+
+                //Obteniendo el nombre, la urgencia y el grado de la urgencia.
+                nombre = espera[0];
+                emergencia = espera[1];
+                codigo = espera[2];
+
+                separador1++; //Aumentando para así buscar a más pacientes.
+
+                //Añadiendo al paciente a la cola de espera.
+                vectorheap.add(new paciente(nombre, emergencia, codigo));
+
+            }
+
+            lector.close(); //Cerrando el archivo.
+
+        } catch (FileNotFoundException ArchivoNoEncontrado) {
+            //No está el archivo.
+
+            System.out.println("El archivo no está o hubo un error.");
+        }
+
+        //Atendiendo a los pacientes.
+        while(separador1 != 0)
+        {
+            //Atención al paciente con mayor prioridad.
+            if(!vectorheap.isEmpty())
+            {
+                System.out.println("Se está atendiendo al paciente con alta prioridad: ");
+                System.out.println(vectorheap.getFirst().toString()); //Imprimiendo al paciente con alta prioridad.
+
+                separador1--; 
+            }
+
+            //Atendiendo al paciente.
+            if(!vectorheap.isEmpty())
+            {
+                System.out.println("Se está atendiendo a: ");
+                System.out.println(vectorheap.remove().toString() + "\n");
+            }
+
+            //Ya no hay pacientes por atender.
+            else
+            {
+                System.out.println("Ya no hay pacientes por atender.");
+            }
+        }
+    }
 }
