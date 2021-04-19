@@ -69,7 +69,7 @@ public class Vista
         }
 
         //Trayendo métodos.
-        //if(eleccion == 1){Heap();}
+        if(eleccion == 1){Heap();}
     }
 
     /**
