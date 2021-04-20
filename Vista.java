@@ -6,6 +6,7 @@
  * Clase Vista: Esta clase será la encargada de hacer que el usuario interactúe con el programa.
  * 
  */
+
 //Imports necesarios.
 import java.util.Scanner;
 import java.io.File;
@@ -25,7 +26,11 @@ public class Vista
     public static int eleccion;
     public static Scanner ele = new Scanner(System.in);
 
-    //Instancias de las clases.
+    public Vista(){
+        //Constructor de la clase vista.
+    }
+
+    //Instancias de la clase VectorHeap.
     static VectorHeap<paciente> vectorheap = new VectorHeap<>(); 
 
     /**
