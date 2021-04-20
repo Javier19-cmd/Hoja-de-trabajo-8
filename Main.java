@@ -12,6 +12,6 @@
 public class Main {
     public static void main(String[] args)
     {
-        //
+        Vista.menu(); //Llamando al método menu de la clase.
     }
 }

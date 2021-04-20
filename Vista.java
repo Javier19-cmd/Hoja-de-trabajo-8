@@ -21,11 +21,9 @@ public class Vista
     //Variables para los separadores.
     static int separador1;
 
-    //Variables para las elecciones.
-    private static int eleccion; 
-    private static Scanner ele;  
+    public static int eleccion;
+    public static Scanner ele = new Scanner(System.in);
 
-    
     //Instancias de las clases.
     static VectorHeap<paciente> vectorheap = new VectorHeap<>(); 
 
@@ -36,6 +34,7 @@ public class Vista
 
     public static void menu()
     {
+
         System.out.println("Bienvenido al sistema hospitalario de atención de pacientes.");
         System.out.println("1. Usar la implementación de VectorHeap");
         System.out.println("2. Usar la implementación de Java Collection Framework");
@@ -116,17 +115,15 @@ public class Vista
             //Atención al paciente con mayor prioridad.
             if(!vectorheap.isEmpty())
             {
-                System.out.println("Se está atendiendo al paciente con alta prioridad: ");
-                System.out.println(vectorheap.getFirst().toString()); //Imprimiendo al paciente con alta prioridad.
+                System.out.println("Se está atendiendo al paciente con alta prioridad: " + vectorheap.getFirst().toString()); //Imprimiendo al paciente con alta prioridad.
 
-                separador1--; 
+                separador1--;
             }
 
             //Atendiendo al paciente.
             if(!vectorheap.isEmpty())
             {
-                System.out.println("Se está atendiendo a: ");
-                System.out.println(vectorheap.remove().toString() + "\n");
+                System.out.println("Se está atendiendo a: " + vectorheap.remove().toString() + "\n"); //Atendiendo a paciente con poca prioridad.
             }
 
             //Ya no hay pacientes por atender.
