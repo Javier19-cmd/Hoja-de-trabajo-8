@@ -1,10 +1,10 @@
 /**
- * Nombre: Javier Sebastián Valle Balsells
- * Carnet: 20159
- * Sección: 10
+ * @author Javier Sebastián Valle Balsells
+ * @carnet 20159
+ * @sección 10
  * 
  * Clase de tipo interfaz llamada PriorityQueue: esta es la encargada de darle los métodos a la clase Vector Heap.
- * 
+ * @see ejemplo publicado en Canvas.
  * 
  * @param <E> se le asigna la E, porque será un objeto.
  */

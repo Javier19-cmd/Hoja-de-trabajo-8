@@ -1,7 +1,7 @@
 /**
  * @author Javier Sebastián Valle Balsells 
- * Carnet 20159
- * Sección 10
+ * @carnet 20159
+ * @sección 10
  * 
  * Clase Vista: Esta clase será la encargada de hacer que el usuario interactúe con el programa.
  * 
@@ -21,6 +21,7 @@ public class Vista
     //Variables para los separadores.
     static int separador1;
 
+    //Variables a usar para las elecciones del usuario.
     public static int eleccion;
     public static Scanner ele = new Scanner(System.in);
 

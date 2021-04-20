@@ -1,8 +1,10 @@
 /**
- * Nombre: Javier Sebastián Valle Balsells
- * Carnet: 20159
- * Clase VectorHeap: Esta clase será la encargada 
- * Referencia: Ejemplo publicado en Canvas. 
+ * @author Javier Sebastián Valle Balsells
+ * @carnet 20159
+ * @sección 10
+ * 
+ * Clase VectorHeap: Esta clase será la encargada de tener los métodos necesarios para poder ser usada en la clase paciente.
+ * @see Ejemplo publicado en Canvas. 
  */
 
 import java.util.Vector;

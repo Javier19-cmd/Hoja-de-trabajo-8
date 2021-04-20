@@ -1,8 +1,8 @@
 /**
  * 
- * Nombre: Javier Sebastián Valle Balsells
- * Carnet: 20159
- * Sección 10
+ * @author Javier Sebastián Valle Balsells
+ * @carnet 20159
+ * @sección 10
  * 
  */
 public class paciente implements Comparable<paciente>
