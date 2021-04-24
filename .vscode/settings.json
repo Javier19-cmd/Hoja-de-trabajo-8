@@ -1,5 +1,13 @@
 {
     "java.project.sourcePaths": [
         ""
+    ],
+
+    "workbench.startupEditor": "newUntitledFile",
+    "java.home": "C:\\Program Files\\Java\\jdk-14.0.1",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\sebas\\Downloads\\junit-platform-console-standalone-1.6.0.jar"
     ]
+
 }

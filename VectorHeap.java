@@ -129,7 +129,7 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>
 
 	protected void pushDownRoot(int root)
 	// pre: 0 <= root < size se busca el index del nodo a mover.
-	// post: moves node at index root down se mueve hacia abajo el objeto a mover a una posición dada en un subárbol.
+	// post: se mueve hacia abajo el objeto a mover a una posición dada en un subárbol.
 	{
 		int heapSize = data.size();
 		E value = data.get(root);
@@ -183,25 +183,26 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>
 
     @Override
     public E getFirst() {
-        // TODO Auto-generated method stub
+        // Retorno del primer valor del VectorHeap.
         return data.get(0);
     }
 
     @Override
     public boolean isEmpty() {
-        // TODO Auto-generated method stub
-        return false;
+        // Verificando que el VectorHeap esté vacío.
+        return data.isEmpty();
     }
 
     @Override
     public int size() {
-        // TODO Auto-generated method stub
-        return 0;
+        // Viendo el tamaño del vector.
+        return data.size();
     }
 
     @Override
     public void clear() {
-        // TODO Auto-generated method stub
+		//Vaciando el vector.
+        data.clear();
         
     }
 
