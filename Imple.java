@@ -14,19 +14,20 @@ public class Imple<E>{
 
 
     /**
-     * 
-     * @param a se envían los parámetros a obtener de la cola prioritaria.
      */
-    public Imple(PriorityQueue<E> a)
+    public Imple()
     {
-        Pac = new PriorityQueue<E>(a.size());
-        for(int i = 0; i<a.size(); i++)
+        Pac = new PriorityQueue<E>(Pac.size());
+        for(int i = 0; i<Pac.size(); i++)
         {
-            a.poll();
+            Pac.poll();
         }
     }
 
-     /**
+     public Imple() {
+    }
+
+    /**
       * 
       * @param value se envía como valor los objetos a añadir, en este caso la info de los pacientes.
       */

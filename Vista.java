@@ -32,7 +32,7 @@ public class Vista
 
     //Instancias de la clase VectorHeap.
     static VectorHeap<paciente> vectorheap = new VectorHeap<>(); 
-    static Imple<paciente> imple = new Imple<>();
+    static Imple<paciente> imple = new Imple();
 
     /**
      * Método menu: Este método será el encargado de darle al usuario la opción de usar la implementación de VectorHeap o la opción de Java Collection Framework para poder usar el sistema hospitalario.
